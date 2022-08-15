@@ -51,7 +51,7 @@ function Form() {
                 <label htmlFor='legal'>I accept <a href='#'>Terms &amp; Conditions</a></label>
             </div>
             <div>
-                <input type='submit' value='Send' className={styles.btn} />
+                <input type='submit' value='Submit' className={styles.btn} />
             </div>
         </form>
     );
