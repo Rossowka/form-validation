@@ -48,6 +48,7 @@ function Form() {
             </div>
             <div className={styles.legal}>
                 <input id='legal' type='checkbox' />
+                <span className={styles.checkbox}></span>
                 <label htmlFor='legal'>I accept <a href='#'>Terms &amp; Conditions</a></label>
             </div>
             <div>
