@@ -19,10 +19,29 @@ function Form() {
             ...formValue,
             [name]: value
         });
+
+        //initial validation
+        const letterCount = value.length;
+        if (letterCount === 0 ) {
+            e.target.placeholder = 'Field required';
+            e.target.style.border = `2px solid ${styles.errorColor}`;
+        } else {
+            e.target.placeholder = '';
+            e.target.style.border = `2px solid ${styles.primaryColor}`;
+        }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        //validation
+        
+        //send data
+        console.log(formValue);
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>Registration Form</h2>
             <div>
                 <label htmlFor='name'>Name</label>
@@ -34,7 +53,7 @@ function Form() {
             </div>
             <div className={styles.bio}>
                 <label htmlFor='bio'>About</label>
-                <textarea id='bio' name='bio' onChange={handleChange} ></textarea>
+                <textarea id='bio' name='bio' onChange={handleChange}></textarea>
                 <label htmlFor='bio'>0/150</label>
             </div>
             <div className={styles.genderChoices} onChange={handleChange}>

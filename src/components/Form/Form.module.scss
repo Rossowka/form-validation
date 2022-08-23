@@ -32,6 +32,10 @@ input {
     &:focus {
         outline-color: $accent-color;
     }
+
+    &::placeholder {
+        color: $error-color;
+    }
 }
 
 .bio {
@@ -57,9 +61,14 @@ textarea {
     resize: none;
     overflow: scroll;
     transition: all 0.3s ease 0s;
+    font-family: $font-stack;
 
     &:focus {
         outline-color: $accent-color;
+    }
+
+    &::placeholder {
+        color: $error-color;
     }
 }
 
